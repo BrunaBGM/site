@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Log = styled.div`
 width: 100%;
-justify-content: center;
+
 height: 100vh;
 padding: 20px;
 background-color: ;

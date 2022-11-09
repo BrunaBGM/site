@@ -22,7 +22,7 @@ function Login() {
     };
 
     const response = await fetch(
-      "http://localhost:8080/ControleAcesso/rest/login/",
+      "http://localhost:3000/ControleAcesso/rest/login/",
       requestOptions
     );
 
