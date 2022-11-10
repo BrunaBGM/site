@@ -1,27 +1,25 @@
 import React,{useEffect} from 'react'
-import ImgBg from '../image/carros-eletricos.jpg'
+import './Home.css'
+import{Link} from 'react-router-dom'
+import Byd from '../image/byd.jpg'
+import Leaf from '../image/leaf.jpg'
+import Cooper from '../image/mini-cooper.jpg'
 // const verificar = sessionStorage.getItem("usuario-valido")
 
 function Home(){
 
-    const home = {
-    
-        margin: '0px',
-        padding: '0px',
-        width: '100%',
-        height: '30em',
-        textAlign: 'center',
-        color: 'black',
-        backgroundImage: `url(${ImgBg})`,
-        backgroundSize: 'cover',
-        display: 'flex'
+    var teste = {
+        marginTop: 0,
+        marginLeft: '90%',
+        position: 'center',
+        color: 'grey',
     }
 
-    var teste = {
-        marginTop: '7%',
-        marginLeft: '10%',
-        color: 'white',
-        textShadow:  '#000 1px 2px 2px'
+    var txt = {
+        position: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+        color: 'black'
     }
 
     // useEffect(()=>{
@@ -30,18 +28,35 @@ function Home(){
     //     }
     // },[])
     return(
-        <div style={home}>
+        <div className='row'>
             <div style={teste}>
         {/* {verificar &&( */}
-            <>
-            <h1>Home</h1>
-            <p>Olá
+            <h1>Olá</h1>
+            <p>
                 {/* {verificar} */}
-                , seja bem vindo</p>
-            </>
+                ,Seja bem vindo!</p>
+            </div>
+            <div style={txt}>
+                <h3>Conheça nossa frota</h3>
+            </div>
         {/* )} */}
-        </div>
-        </div>
+            
+            <div className='card'>
+                <h2>BYD Tan</h2>
+                    <p>Ideal para quem busca tecnologia de última geração e se preocupa com meio ambiente.</p>
+                    <a href='../Locacao'><img className='image' src={Byd}/></a>
+            </div>
+            <div className='card'>
+                <h2>Nissan Leaf</h2>
+                    <p>Veículo 100% elétrico, conta com uma ampla capacidade interna, ideal para quem busca uma mobilidade sustentável para o transporte de cargas leves.</p>
+                    <a href='../Locacao'><img className='image' src={Leaf}/></a>
+            </div>
+            <div className='card'>
+                <h2>Mini Cooper</h2>
+                    <p>Esse veículo elétrico garante uma alta praticidade para realizar o transporte de grandes volumes de mercadorias, sem prejudicar o meio ambiente. </p>
+                    <a href='../Locacao'><img className='image' src={Cooper}/></a>
+            </div>
+         </div>
     )
 }
 export default Home;
